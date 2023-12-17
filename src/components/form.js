@@ -2,23 +2,23 @@ import React from 'react'
 
 function FormElt() {
     return (
-        <form className='w-fit flex flex-col my-8'>
+        <form className='w-[800px] p-8'>
             <div>
                 <div class="border-b border-gray-900/10 pb-12">
                     <h1 class="text-5xl font-semibold text-white">Enroll today!</h1>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
-                            <label for="first-name" class="block text-sm font-medium leading-6 text-white">Name</label>
+                            <label for="name" class="block text-sm font-medium leading-6 text-white">Name</label>
                             <div class="mt-2">
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input type="text" name="name" id="name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
 
                         <div class="sm:col-span-3">
-                            <label for="last-name" class="block text-sm font-medium leading-6 text-white">Age</label>
+                            <label for="age" class="block text-sm font-medium leading-6 text-white">Age</label>
                             <div class="mt-2">
-                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input type="text" name="age" id="age" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
 
@@ -30,9 +30,9 @@ function FormElt() {
                         </div>
 
                         <div class="sm:col-span-3">
-                            <label for="country" class="block text-sm font-medium leading-6 text-white">Batch</label>
+                            <label for="batch" class="block text-sm font-medium leading-6 text-white">Batch</label>
                             <div class="mt-2">
-                                <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                                <select id="batch" name="batch" autocomplete="batch" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                     <option>6 - 7 AM</option>
                                     <option>7 - 8 AM</option>
                                     <option>8 - 9 AM</option>
@@ -42,23 +42,23 @@ function FormElt() {
                         </div>
 
                         <div class="col-span-full">
-                            <label for="street-address" class="block text-sm font-medium leading-6 text-white">Address</label>
+                            <label for="address" class="block text-sm font-medium leading-6 text-white">Address</label>
                             <div class="mt-2">
-                                <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input type="text" name="address" id="address" autocomplete="address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
 
-                        <div class="sm:col-span-2 sm:col-start-1">
-                            <label for="city" class="block text-sm font-medium leading-6 text-white">Pincode</label>
+                        <div class="sm:col-span-3">
+                            <label for="pincode" class="block text-sm font-medium leading-6 text-white">Pincode</label>
                             <div class="mt-2">
-                                <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input type="text" name="pincode" id="pincode" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
 
-                        <div class="sm:col-span-2">
-                            <label for="region" class="block text-sm font-medium leading-6 text-white">Phone Number</label>
+                        <div class="sm:col-span-3">
+                            <label for="phone-number" class="block text-sm font-medium leading-6 text-white">Phone Number</label>
                             <div class="mt-2">
-                                <input type="text" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input type="text" name="phone-number" id="phone-number" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
                     </div>

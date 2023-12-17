@@ -7,7 +7,7 @@ function Leave() {
         document.getElementById('enrollment--id').value = '';
     }
     return (
-        <div className='my-8'>
+        <div className='w-[800px] p-8'>
             <h1 class="text-5xl font-semibold text-white">Leave the classes?</h1>
 
             <div id="dialog-box-1" className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>

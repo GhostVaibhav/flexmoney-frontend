@@ -8,7 +8,7 @@ import Pay from "./components/Pay";
 
 function App() {
   return (
-    <div className="bg-gray-900 h-screen">
+    <div className="bg-gray-900 min-h-screen h-max">
       <Router>
         <Navbar />
         <div className='flex justify-center text-white'>
