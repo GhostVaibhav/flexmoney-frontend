@@ -7,16 +7,16 @@ function FormElt() {
         name = document.getElementById('name').value;
         age = document.getElementById('age').value;
         email = document.getElementById('email').value;
-        if(document.getElementById('batch').value == '6 - 7 AM') {
+        if(document.getElementById('batch').value === '6 - 7 AM') {
             batch = '6-7';
         }
-        else if(document.getElementById('batch').value == '7 - 8 AM') {
+        else if(document.getElementById('batch').value === '7 - 8 AM') {
             batch = '7-8';
         }
-        else if(document.getElementById('batch').value == '8 - 9 AM') {
+        else if(document.getElementById('batch').value === '8 - 9 AM') {
             batch = '8-9';
         }
-        else if(document.getElementById('batch').value == '5 - 6 PM') {
+        else if(document.getElementById('batch').value === '5 - 6 PM') {
             batch = '5-6';
         }
         address = document.getElementById('address').value;

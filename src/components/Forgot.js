@@ -1,10 +1,37 @@
 import React from 'react'
 
 function Forgot() {
-    function submit() {
-        document.getElementById('dialog-box-1').classList.add('hidden')
-        document.getElementById('dialog-box-2').classList.remove('hidden')
-        document.getElementById('dialog-box-2').classList.add('grid')
+    async function submit() {
+        var phone = document.getElementById('phone-number').value;
+        let response = {'phoneNumber': phone};
+        response = JSON.stringify(response);
+
+        try {
+            const resp = await fetch('http://localhost:3001/forgot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: response
+            });
+    
+            const respJson = await resp.json();
+
+            if(respJson['error'] !== undefined)  throw respJson['error']
+
+            document.getElementById('enrollment-id').value = respJson.enrollmentID;
+    
+            document.getElementById('dialog-box-1').classList.add('hidden');
+            document.getElementById('dialog-box-2').classList.remove('hidden');
+            document.getElementById('dialog-box-2').classList.add('grid');
+        }
+        catch(err) {
+            document.getElementById('enrollment-id').value = "No such user exists";
+    
+            document.getElementById('dialog-box-1').classList.add('hidden');
+            document.getElementById('dialog-box-2').classList.remove('hidden');
+            document.getElementById('dialog-box-2').classList.add('grid');
+        }
     }
 
     return (
