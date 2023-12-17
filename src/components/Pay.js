@@ -1,6 +1,32 @@
 import React from 'react'
 
 function Pay() {
+    async function pay() {
+        var enrollmentID = document.getElementById('enrollment-id').value;
+        let response = { 'enrollmentID': enrollmentID };
+        response = JSON.stringify(response);
+
+        try {
+            const resp = await fetch('http://localhost:3001/pay', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: response
+            });
+
+            const respJson = await resp.json();
+
+            if (respJson['error'] !== undefined) throw respJson['error']
+
+            document.getElementById('dialog-box-1').classList.add('hidden');
+            document.getElementById('dialog-box-2').classList.remove('hidden');
+        }
+        catch (err) {
+            document.getElementById('dialog-box-1').classList.add('hidden');
+            document.getElementById('dialog-box-3').classList.remove('hidden');
+        }
+    }
     return (
         <div className='w-[800px] p-8'>
             <h1 class="text-5xl font-semibold text-white">Pay for the outstanding dues!</h1>
@@ -13,7 +39,19 @@ function Pay() {
                     </div>
                 </div>
 
-                <button class="rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Pay</button>
+                <button onClick={pay} class="w-full md:w-max rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Call CompletePayment()</button>
+            </div>
+
+            <div id="dialog-box-2" className='hidden mt-10'>
+                <div className="border-b border-gray-900/10 pb-12">
+                    <h1 className="text-5xl font-semibold text-white">✔Dues cleared!</h1>
+                </div>
+            </div>
+            
+            <div id="dialog-box-3" className='hidden mt-10'>
+                <div className="border-b border-gray-900/10 pb-12">
+                    <h1 className="text-5xl font-semibold text-white">❗Dues not cleared!</h1>
+                </div>
             </div>
         </div>
     )

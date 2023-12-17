@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Leave() {
-    const loading = useState(false);
-
     function leave() {
         document.getElementById('enrollment--id').value = '';
     }
