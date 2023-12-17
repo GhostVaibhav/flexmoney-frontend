@@ -18,9 +18,9 @@ function Change() {
     }
     return (
         <div className='my-8'>
-            <div className='flex flex-col items-end'>
+            <div className='flex flex-col items-center'>
                 <h1 class="text-5xl font-semibold text-white">Want to change the batch?</h1>
-                <h1 class="text-xl font-extralight text-white">No issues!</h1>
+                <h1 class="text-xl font-extralight text-white self-end">No issues!</h1>
             </div>
 
             <div id="dialog-box-1" className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
