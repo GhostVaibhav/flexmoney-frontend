@@ -81,7 +81,7 @@ function Change() {
     return (
         <div className='w-[800px] p-8'>
             <div className='flex flex-col'>
-                <h1 class="text-5xl font-semibold text-white">Want to change the batch?</h1>
+                <h1 class="text-5xl font-semibold text-white">🧘‍♂️<s>Want to</s> change the batch?</h1>
                 <h1 class="text-xl font-extralight text-white self-end">No issues!</h1>
             </div>
 
