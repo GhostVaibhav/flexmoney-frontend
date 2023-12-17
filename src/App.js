@@ -4,6 +4,7 @@ import FormElt from "./components/form";
 import Leave from "./components/Leave";
 import Forgot from "./components/Forgot";
 import Change from "./components/Change";
+import Pay from "./components/Pay";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<FormElt />} />
             <Route path="/leave" element={<Leave />} />
+            <Route path="/pay" element={<Pay />} />
             <Route path="/forgot" element={<Forgot />} />
             <Route path="/change" element={<Change />} />
           </Routes>

@@ -13,6 +13,7 @@ function Navbar() {
                         <span className="ml-3 text-xl">Yoga Elements</span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                        <Link to="/pay" className="mr-5 hover:text-white">Pay</Link>
                         <Link to="/leave" className="mr-5 hover:text-white">Leave</Link>
                         <Link to="/change" className="mr-5 hover:text-white">Change batch</Link>
                         <Link to="/forgot" className="mr-5 hover:text-white">Forgot ID</Link>
