@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import FormElt from "./components/form";
+import Leave from "./components/Leave";
+import Forgot from "./components/Forgot";
+import Change from "./components/Change";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-900 h-screen">
+      <Router>
+        <Navbar />
+        <div className='flex justify-center text-white'>
+          <Routes>
+            <Route path="/" element={<FormElt />} />
+            <Route path="/leave" element={<Leave />} />
+            <Route path="/forgot" element={<Forgot />} />
+            <Route path="/change" element={<Change />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
