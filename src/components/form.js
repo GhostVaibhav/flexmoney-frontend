@@ -27,7 +27,7 @@ function FormElt() {
         response = JSON.stringify(response);
 
         try {
-            const resp = await fetch('http://localhost:3001/new', {
+            const resp = await fetch(process.env.REACT_APP_SERVER_ADDRESS + '/new', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

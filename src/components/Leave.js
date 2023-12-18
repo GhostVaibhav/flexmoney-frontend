@@ -7,7 +7,7 @@ function Leave() {
         response = JSON.stringify(response);
 
         try {
-            const resp = await fetch('http://localhost:3001/leave', {
+            const resp = await fetch(process.env.REACT_APP_SERVER_ADDRESS + '/leave', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ function Change() {
             response = JSON.stringify(response);
 
             try {
-                const resp = await fetch('http://localhost:3001/getb', {
+                const resp = await fetch(process.env.REACT_APP_SERVER_ADDRESS + '/getb', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

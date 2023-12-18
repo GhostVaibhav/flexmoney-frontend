@@ -7,7 +7,7 @@ function Pay() {
         response = JSON.stringify(response);
 
         try {
-            const resp = await fetch('http://localhost:3001/pay', {
+            const resp = await fetch(process.env.REACT_APP_SERVER_ADDRESS + '/pay', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

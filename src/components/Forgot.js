@@ -7,7 +7,7 @@ function Forgot() {
         response = JSON.stringify(response);
 
         try {
-            const resp = await fetch('http://localhost:3001/forgot', {
+            const resp = await fetch(process.env.REACT_APP_SERVER_ADDRESS + '/forgot', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
